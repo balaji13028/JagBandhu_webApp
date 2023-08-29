@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jagbandhu_web_app/helpers/responsive_widget.dart';
 import 'package:jagbandhu_web_app/widgets/small_sideBar.dart';
 
 import '../../controllers/side_navBar_controller.dart';
@@ -15,14 +16,21 @@ class TabletScreen extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          SizedBox(width: size.width * 0.16, child: SmallSideBar(size: size)),
+          Obx(() => (sideController.menuOpend.value)
+              ? AspectRatio(
+                  aspectRatio: ResponsiveWidget.isLaptop(context) ? 0.12 : 0.1,
+                  child: SizedBox(
+                      width: size.width * 0.16,
+                      child: SmallSideBar(size: size)),
+                )
+              : const SizedBox()),
           Expanded(
               flex: 5,
               child: Container(
                 color: AppColors.secondaryColor,
                 child: Column(
-                  children: [
-                    TopBar(drawerKey: sideController.scaffoldKey),
+                  children: const [
+                    TopBar(),
                   ],
                 ),
               ))

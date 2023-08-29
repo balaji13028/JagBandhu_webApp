@@ -5,7 +5,7 @@ class SideNaviBarController extends GetxController {
   var scaffoldKey = GlobalKey<ScaffoldState>();
   var onSelect = [].obs;
   var sideOptions = [].obs;
-  var onTap = true.obs;
+  var menuOpend = true.obs;
 
   @override
   void onInit() {
@@ -63,7 +63,6 @@ class SideNaviBarController extends GetxController {
     sideOptions.value = options;
     onSelect.value =
         List.generate(options.length, ((index) => index == 0 ? true : false));
-    // onSelect.value = options.map((e) => e['selected']).toList();
   }
 
   navigateToOptions(index) {

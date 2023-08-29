@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:jagbandhu_web_app/helpers/app_colors.dart';
+
+import '../controllers/side_navBar_controller.dart';
+import '../helpers/responsive_widget.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
   final GlobalKey<ScaffoldState>? drawerKey;
@@ -15,9 +19,11 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
         automaticallyImplyLeading: false,
         leading: IconButton(
           onPressed: () {
-            // if (ResponsiveWidget.isSmallScreen(context)) {
-            drawerKey?.currentState!.openDrawer();
-            // }
+            if (ResponsiveWidget.isMobile(context)) {
+              drawerKey?.currentState!.openDrawer();
+            } else {
+              Get.find<SideNaviBarController>().menuOpend.toggle();
+            }
           },
           icon: const Icon(
             Icons.menu,

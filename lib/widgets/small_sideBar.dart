@@ -50,9 +50,8 @@ class SmallSideBar extends StatelessWidget {
                             Text(
                               options['category'],
                               textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: size.width * 0.014,
-                                  color: Colors.white),
+                              style: const TextStyle(
+                                  fontSize: 12, color: Colors.white),
                             ),
                           ],
                         ))),
