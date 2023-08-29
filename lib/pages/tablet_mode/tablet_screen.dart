@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jagbandhu_web_app/helpers/responsive_widget.dart';
 import 'package:jagbandhu_web_app/widgets/small_sideBar.dart';
 
 import '../../controllers/side_navBar_controller.dart';
@@ -18,7 +17,7 @@ class TabletScreen extends StatelessWidget {
         children: [
           Obx(() => (sideController.menuOpend.value)
               ? AspectRatio(
-                  aspectRatio: ResponsiveWidget.isLaptop(context) ? 0.12 : 0.1,
+                  aspectRatio: 0.1,
                   child: SizedBox(
                       width: size.width * 0.16,
                       child: SmallSideBar(size: size)),
