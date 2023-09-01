@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jagbandhu_web_app/pages/dash_board/dash_board_screen.dart';
 import 'package:jagbandhu_web_app/widgets/small_sideBar.dart';
 
 import '../../controllers/side_navBar_controller.dart';
@@ -30,6 +31,7 @@ class TabletScreen extends StatelessWidget {
                 child: Column(
                   children: const [
                     TopBar(),
+                    DashBoatdScreen(),
                   ],
                 ),
               ))

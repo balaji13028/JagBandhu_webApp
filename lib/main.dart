@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jagbandhu_web_app/helpers/app_colors.dart';
 import 'package:jagbandhu_web_app/layout_page.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         title: 'JagBandhu',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.secondaryColor,
           primarySwatch: Colors.blue,
         ),
         home: const LayoutPage());

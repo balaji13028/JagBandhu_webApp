@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jagbandhu_web_app/helpers/app_colors.dart';
+import 'package:jagbandhu_web_app/pages/dash_board/dash_board_screen.dart';
 import 'package:jagbandhu_web_app/widgets/side_naviBar.dart';
 import 'package:jagbandhu_web_app/widgets/top_bar.dart';
 
@@ -31,6 +32,7 @@ class DeskTopScreen extends StatelessWidget {
                 child: Column(
                   children: const [
                     TopBar(),
+                    DashBoatdScreen(),
                   ],
                 ),
               ))
